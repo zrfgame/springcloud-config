@@ -1,1 +1,2 @@
-ZRF : Http:// WWW.yxgis.com:8080/springcloud-dev
+zrf:
+  prot:8012-dev
