@@ -1,0 +1,21 @@
+###设置rabbion超时时间
+ribbon:  
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+  ###设置zuul超时时间
+zuul:
+  host:
+        connect-timeout-millis: 3000
+        socket-timeout-millis: 3000
+  routes:
+  ###定义转发服务规则
+    api-a:
+    ####当客户端发送请求127.0.0.1:80/api-number开头的都会转发到 会员服务
+      path: /api-number/**
+      ##会员别名
+      serviceId: eureka-client
+    api-b:
+     ####当客户端发送请求127.0.0.1:80/api-order开头的都会转发到 订单服务
+      path: /api-order/**
+      ###订单别名
+      serviceId: eureka-order-client
