@@ -1,8 +1,4 @@
-###设置rabbion超时时间
-ribbon:  
-  ReadTimeout: 3000
-  ConnectTimeout: 3000
-  ###设置zuul超时时间
+###设置zuul超时时间
 zuul:
   host:
         connect-timeout-millis: 3000
